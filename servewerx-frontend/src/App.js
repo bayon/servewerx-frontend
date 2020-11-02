@@ -15,7 +15,7 @@ function App() {
     // GET request using fetch inside useEffect React hook
     // Production: http://67.205.153.202:3000
     // Local:     http://localhost:30000
-    fetch('http://localhost:3000/url')
+    fetch('http://67.205.153.202:3000/url')
         .then(response => response.json())
         .then(data => setData(data));
 
