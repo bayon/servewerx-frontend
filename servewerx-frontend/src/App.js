@@ -13,7 +13,7 @@ function App() {
    
   useEffect(() => {
     // GET request using fetch inside useEffect React hook
-    fetch('http://localhost:3003/url')
+    fetch('http://localhost:3000/url')
         .then(response => response.json())
         .then(data => setData(data));
 
