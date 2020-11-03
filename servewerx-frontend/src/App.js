@@ -2,14 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState,useEffect } from 'react';
 
-
-
-
-
 function App() {
 
   const [data, setData] = useState(null);
-
    
   useEffect(() => {
     // GET request using fetch inside useEffect React hook
