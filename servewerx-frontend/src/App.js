@@ -5,8 +5,8 @@ import React, { useState,useEffect } from 'react';
 function App() {
 
   const [data, setData] = useState(null);
-  const api_prod = "http://67.205.153.202:3000/api/v1/junk"
-  const api_dev = "http://localhost:3000/api/v1/junk"
+  const api_prod = "http://67.205.153.202:3000/api/vTest/junk"
+  const api_dev = "http://localhost:3000/api/vTest/junk"
    
   useEffect(() => {
     // GET request using fetch inside useEffect React hook
