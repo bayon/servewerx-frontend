@@ -4,7 +4,7 @@ import React, { useState,useEffect } from 'react';
 
 function App() {
 
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const api_prod = "http://67.205.153.202:3000/api/vTest/junk"
   const api_dev = "http://localhost:3000/api/vTest/junk"
    
@@ -19,6 +19,7 @@ function App() {
   // empty dependency array means this effect will only run once (like componentDidMount in classes)
   }, []);
 
+  var display = JSON.stringify(data)
   return (
     <div className="App">
       <header className="App-header">
@@ -34,7 +35,7 @@ function App() {
         >
           Learn React
         </a>
-        <div>{data}</div>
+  <div>{display}</div>
       </header>
     </div>
   );
