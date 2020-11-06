@@ -6,6 +6,9 @@ import axios from "axios";
 
 function Admin(props) {
   const { setAuthTokens } = useAuth();
+  const api_prod = "http://67.205.153.202:3000/api/vTest"
+  const api_dev  = "http://localhost:4000/api/vTest"
+  const API_URL = api_prod;
 
   function testToken() {
     const token = localStorage.getItem('tokens');
@@ -13,7 +16,7 @@ function Admin(props) {
  
     console.log("START: testToken");
     axios
-      .get("http://localhost:4000/api/vTest/auth/test", {
+      .get(`${API_URL}/auth/test`, {
          headers: {
           authorization: 'Bearer '+ token
         }
