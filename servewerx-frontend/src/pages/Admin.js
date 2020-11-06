@@ -13,7 +13,7 @@ function Admin(props) {
  
     console.log("START: testToken");
     axios
-      .get("http://localhost:4000/api/vTest/token/test", {
+      .get("http://localhost:4000/api/vTest/auth/test", {
          headers: {
           authorization: 'Bearer '+ token
         }
