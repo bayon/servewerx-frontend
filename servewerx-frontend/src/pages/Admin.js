@@ -8,7 +8,7 @@ function Admin(props) {
   const { setAuthTokens } = useAuth();
   const api_prod = "http://67.205.153.202:4000/api/vTest"
   const api_dev  = "http://localhost:4000/api/vTest"
-  const API_URL = api_prod;
+  const API_URL = api_dev;
 
   function testToken() {
     const token = localStorage.getItem('tokens');
