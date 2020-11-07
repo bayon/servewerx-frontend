@@ -17,8 +17,11 @@ function Login(props) {
 
   function postLogin() {
     console.log('START: postLogin')
- 
-    axios.post("http://localhost:4000/api/vTest/auth/login", {
+    const api_prod = "http://67.205.153.202:4000/api/vTest"
+    const api_dev  = "http://localhost:4000/api/vTest"
+    const API_URL = api_dev;
+
+    axios.post(`${API_URL}/auth/login`, {
       userName,
       password
       

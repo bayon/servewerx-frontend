@@ -19,10 +19,13 @@ function Signup() {
   //const referer = props.location || '/';
   const referer = '/';
 
-
+  const api_prod = "http://67.205.153.202:4000/api/vTest"
+  const api_dev  = "http://localhost:4000/api/vTest"
+  const API_URL = api_dev;
+ 
   function postSignUp() {
     console.log('postSignUp....fn...')
-    axios.post("http://localhost:4000/api/vTest/auth/signup", {
+    axios.post(`${API_URL}/auth/signup`, {
       userName,
       password
     }).then(result => {
