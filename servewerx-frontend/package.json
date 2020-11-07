@@ -15,10 +15,10 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "PORT=80 react-scripts start webpack --env.API_URL=http://localhost:80 --config webpack.config.dev.js",
-    "dev": "PORT=80 react-scripts start webpack --env.API_URL=http://localhost:80 --config webpack.config.dev.js",
-    "build": "react-scripts build webpack --env.API_URL=http://localhost:80 --config webpack.config.build.js",
-    "test": "react-scripts test",
+    "start": "PORT=80 react-scripts start  dotenv/config",
+    "dev": "PORT=80 react-scripts start  dotenv/config",
+    "build": "react-scripts build  dotenv/config",
+    "test": "react-scripts test  dotenv/config",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -38,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.2.0"
   }
 }
