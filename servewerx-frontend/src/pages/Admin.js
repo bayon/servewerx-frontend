@@ -3,9 +3,7 @@ import { Button } from "../components/AuthForms";
 import { useAuth } from "../context/auth";
 
 import axios from "axios";
-//const { REACT_APP_API } = process.env;
-const REACT_APP_API = "http://localhost:4000/api/vTest"
-
+ 
 
 function Admin(props) {
   const { setAuthTokens } = useAuth();
@@ -17,7 +15,7 @@ function Admin(props) {
  
     console.log("START: testToken");
     axios
-      .get(`${REACT_APP_API}/auth/test`, {
+      .get(`${process.env.REACT_APP_API}/auth/test`, {
          headers: {
           authorization: 'Bearer '+ token
         }

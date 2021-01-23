@@ -4,8 +4,7 @@ import axios from 'axios';
 import logoImg from "../img/logo.jpg";
 import { Card, Logo, Form, Input, Button, Error } from "../components/AuthForms";
 import { useAuth } from "../context/auth";
-//const { REACT_APP_API } = process.env;
-const REACT_APP_API = "http://localhost:4000/api/vTest"
+
 
 function Login(props) {
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -19,7 +18,7 @@ function Login(props) {
 
   function postLogin() {
     console.log('START: postLogin')
-    axios.post(`${REACT_APP_API}/auth/login`, {
+    axios.post(`${process.env.REACT_APP_API}/auth/login`, {
       userName,
       password
       

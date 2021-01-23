@@ -5,8 +5,7 @@ import logoImg from "../img/logo.jpg";
 import { Card, Logo, Form, Input, Button } from '../components/AuthForms';
 import axios from 'axios';
 import { useAuth } from "../context/auth";
-//const { REACT_APP_API } = process.env;
-const REACT_APP_API = "http://localhost:4000/api/vTest"
+
 
 
 function Signup() {
@@ -23,7 +22,7 @@ function Signup() {
 
   function postSignUp() {
     console.log('postSignUp....fn...')
-    axios.post(`${REACT_APP_API}/auth/signup`, {
+    axios.post(`${process.env.REACT_APP_API}/auth/signup`, {
       userName,
       password
     }).then(result => {
