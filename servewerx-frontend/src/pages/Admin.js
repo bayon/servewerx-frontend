@@ -3,7 +3,8 @@ import { Button } from "../components/AuthForms";
 import { useAuth } from "../context/auth";
 
 import axios from "axios";
-const { REACT_APP_API } = process.env;
+//const { REACT_APP_API } = process.env;
+const REACT_APP_API = "http://localhost:4000/api/vTest"
 
 
 function Admin(props) {
