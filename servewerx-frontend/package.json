@@ -15,9 +15,10 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "PORT=80 react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "PORT=80 react-scripts start  dotenv/config",
+    "dev": "PORT=80 react-scripts start  dotenv/config",
+    "build": "react-scripts build  dotenv/config",
+    "test": "react-scripts test  dotenv/config",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,8 +40,11 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "dotenv": "^8.2.0",
     "webpack": "^5.4.0",
+=======
+>>>>>>> 830a45f927792e09024882d7f2ef5cdb59c1c01d
     "webpack-cli": "^4.2.0"
   }
 }
